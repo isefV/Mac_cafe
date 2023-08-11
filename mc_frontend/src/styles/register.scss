@@ -1,0 +1,26 @@
+.rgstr-Cntr{
+    width: 450px;
+    height: 500px;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+
+    .rgstr-btn{
+        .btn{
+            width: 70px;
+            text-align: center;
+            border: none;
+
+            &:nth-child(odd){
+               border-radius:  $radius  0 0  $radius;
+            }
+
+            &:nth-child(even){
+                border-radius: 0 $radius $radius 0;
+            }
+        }
+    }
+
+    .rgstr-item{
+        flex-direction: column;
+    }
+}

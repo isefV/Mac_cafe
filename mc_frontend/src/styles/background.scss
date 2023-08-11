@@ -1,0 +1,10 @@
+.bg-Cntr{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    .bg-item{
+        position: absolute;
+        z-index: -10;
+    }
+}

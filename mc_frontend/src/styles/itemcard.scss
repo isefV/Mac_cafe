@@ -1,0 +1,102 @@
+.itemCard-Cntr{
+    min-width: 250px;
+    min-height: 500px;
+    width: 300px;
+    height: 500px;
+    margin: 30px 5px;
+
+    position: relative;
+
+    .ic{
+        width: 100%;
+        height: 100%;
+        // background-color: $clr-bg-1;
+        border-radius: $radius;
+        border: solid 0.5px white;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .ic-img{
+        width: 280px;
+        position: relative;
+        top: -10px;
+
+        img{
+            width: 100%;
+            border-radius: $radius;
+        }
+    }
+
+    .ic-info{
+        font-size: 10pt;
+        width: 80%;
+        overflow: hidden;
+
+        .ic-title{
+            color: white;
+            font-size: 14pt;
+            font-weight: 400;
+            border-bottom: solid 1px $clr-surf;
+            padding: 5px;
+            margin-bottom: 10px;
+
+            .ic-count{      
+                padding: 0px 10px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .ic-buy{
+        flex-direction: column;
+        position: absolute;
+        bottom: -20px;
+
+        .ic-price{
+            color: $clr-1;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 16pt;
+        }
+
+        .ic-btn{
+
+            height: 40px;
+
+            .btn{
+                height: 30px;
+
+                &:hover{
+                    background-color: $clr-2;
+                }
+            }
+
+            input{
+                
+                border: none;
+                border-left: solid 1px $clr-bg-1;
+                border-right: solid 1px $clr-bg-1;
+                font-size: 16pt;
+                text-align: center;
+                width: 50px;
+                direction: rtl;
+                font-family: "Vazirmatn";
+                font-weight: 200;
+            }
+
+        }
+    }
+
+    .ic-discount{
+        position: absolute;
+        top: 0px;
+        left: 20px;
+        padding: 2px 10px; 
+        font-weight: 400;
+        
+        &>div{
+            font-size: 14pt;
+        }
+    }
+}

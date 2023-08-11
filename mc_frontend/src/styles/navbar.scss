@@ -1,0 +1,46 @@
+.nav-Cntr{
+    width: 100vw;
+    background: $clr-bg-1;
+    // background: radial-gradient(50% 100% at center,#292929,$clr-bg-1);
+    position: fixed;
+    z-index: 10;
+    overflow: hidden;
+
+    .nav{
+        display: flex;
+        width: 85%;
+        height: 50px;
+        justify-content: space-between;
+        // margin: 10px;
+
+        .btn{
+            border: none;
+            fill: $clr-surf;
+            padding: 10px;
+            transition: transform 0.5s 1ms ease-in-out;
+    
+            &:hover{
+                transform: scale(0.9);
+                fill: $clr-1;
+                background-color: transparent;
+            }
+        }
+        &>div{
+            margin: 5px 10px;
+        }
+    
+        .badges{
+            position: relative;
+            background-color: $clr-1;
+            width: 10px;
+            height: 10px;
+            top: -25px;
+            left: 10px;
+            border-radius: 10px;
+        }
+    
+        .nav-item{
+            height: 100%;
+        }    
+    }
+}

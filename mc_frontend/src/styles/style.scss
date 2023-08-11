@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url("./fonts/Vazirmatn-FD-Regular.ttf") format('truetype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Vazirmatn';
+    src: url("./fonts/Vazirmatn-FD-Bold.ttf") format('truetype');
+    font-weight: 400;
+}
+
+@import "variables";
+
+@import "responsive";
+
+@import "main";
+@import "navbar";
+@import "tabnavigation";
+@import "footer";
+@import "itemcard";
+@import "menu";
+@import "background";
+@import "landing";
+@import "selective";
+@import "sidebar";
+@import "view";
+@import "register";

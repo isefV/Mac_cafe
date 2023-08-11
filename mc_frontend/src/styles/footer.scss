@@ -1,0 +1,35 @@
+.footer-Cntr{
+    width: 100%;
+    background-color: $clr-1;
+    color: $clr-bg-1;
+    border-radius: 50px 50px 0 0;
+
+    .footer-info{
+        margin-top: 100px;
+
+        .footer-aboutus{
+            margin: 10px 20px;
+        }
+
+        .footer-map{
+            iframe{
+                border-radius: $radius;
+                border: none;
+            }
+        }
+    }
+
+    .footer-dev{
+        padding: 10px;
+        font-weight: 400;
+
+        a{
+            padding: 5px 10px;
+            margin: 10px;
+            border-radius: $radius;
+            background-color: $clr-bg-1;
+            color: $clr-1;
+            text-decoration: none;
+        }
+    }
+}

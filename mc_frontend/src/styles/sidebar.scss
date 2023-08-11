@@ -1,0 +1,45 @@
+.sb-Cntr{
+    height: 80vh;
+
+    justify-content: space-between;
+    flex-direction: column;
+
+    .sb-item{
+        width: 85%;
+        margin: 20px 0;
+        flex-direction: column;
+
+        .counter-bill{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            text-align: center;
+        }
+
+        .profile-Cntr{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+
+            .profile-img{
+                background-color: $clr-bg-1;
+                width: 70px;
+                height: 70px;
+                border-radius: 100px;
+            }
+
+            .profile-info{
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .btn{
+        text-align: center;
+        width: 100%;
+        height: 30px;
+        margin: 5px;
+    }
+
+    
+}
