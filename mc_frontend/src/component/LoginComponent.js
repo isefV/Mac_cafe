@@ -64,7 +64,7 @@ const LoginComponent = (props) => {
         
             <input className={data["_password"]!==null ? (dataState["_password"]?" brd-succesfull":" brd-unsuccesfull"):""} placeholder="رمز عبور" type="password" onChange={(e)=>{dataHandler("_password",e.target.value)}}/>
 
-        <ButtonComponent value="فراموشی رمز عبور" cls=" btn-text"/>
+        {/* <ButtonComponent value="فراموشی رمز عبور" cls=" btn-text"/> */}
     </div> );
 }
  

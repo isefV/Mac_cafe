@@ -1,6 +1,5 @@
 import {BrowserRouter as Router,Route,Routes} from "react-router-dom"
 import { useEffect, useState } from "react";
-import Cookies from 'js-cookie';
 
 import { empty } from "./Tools/Variables";
 import { getHandler , selectNonZeroHandler} from "./Tools/Functions";

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-
+import { local } from "../Tools/Variables";
 import ButtonComponent from "./ButtonComponent";
 
 const ItemCardComponent = (props) => {
@@ -9,6 +9,7 @@ const ItemCardComponent = (props) => {
 
     useEffect(()=>{
         props.countHandler(props.itemsId,count);
+        console.log(props.data["_img"]);
     },[count])
 
     useEffect(()=>{},[props.data])
@@ -21,7 +22,7 @@ const ItemCardComponent = (props) => {
         <div className="itemCard-Cntr glass">
             <div className="ic center">
                 <div className="ic-img">
-                    <img src={props.data["_img"] !== null ? props.data["_img"]:"./assets/svg/preview.svg"} alt="preview" />
+                    <img src={props.data["_img"] !== null ? local + "/img/"+ props.data["_img"] :"./assets/svg/preview.svg"} alt="preview" />
                 </div>
                 <div className="ic-info fa">
                     <div className="ic-title">{props.data["_title"]}{props.data["_count"] !== null && props.data["_count"] > 0 &&<span className="ic-count style-1">{props.data["_count"]}</span>}</div>

@@ -189,18 +189,18 @@ const AdminPage = (props) => {
                     </div>
                     <div className="admin-menu">
                         <div className="center">
-                            <input placeholder={activeMenu !== "menuPart" ? menuData["_title"]:"عنوان منو"} type="text" disabled={(mode || !editMode)&& activeMenu!=="menuPart"} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_title"]):""} onChange={(e)=>{updateDataHandler("_title",menuData,e.target.value,setMenuData)}}/>
+                            <input placeholder={activeMenu !== "menuPart" ? menuData["_title"]:"عنوان منو"} type="text" disabled={mode ||( !editMode && activeMenu!=="menuPart")} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_title"]):""} onChange={(e)=>{updateDataHandler("_title",menuData,e.target.value,setMenuData)}}/>
 
-                            <textarea placeholder={activeMenu !== "menuPart" ? menuData["_descriptions"]:"توضیحات"} row="5" disabled={(mode || !editMode)&& activeMenu!=="menuPart"} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_descriptions"]):""} onChange={(e)=>{updateDataHandler("_descriptions",menuData,e.target.value,setMenuData)}}/>
+                            <textarea placeholder={activeMenu !== "menuPart" ? menuData["_descriptions"]:"توضیحات"} row="5" disabled={mode ||( !editMode && activeMenu!=="menuPart")} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_descriptions"]):""} onChange={(e)=>{updateDataHandler("_descriptions",menuData,e.target.value,setMenuData)}}/>
                         </div>
                         <div className="center">
-                            <input placeholder={activeMenu !== "menuPart" ? menuData["_price"]:"قیمت"} type="number" min="0" max="1000" disabled={(mode || !editMode)&& activeMenu!=="menuPart"} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_price"]):""} onChange={(e)=>{updateDataHandler("_price",menuData,e.target.value,setMenuData)}}/>
+                            <input placeholder={activeMenu !== "menuPart" ? menuData["_price"]:"قیمت"} type="number" min="0" max="1000" disabled={mode ||( !editMode && activeMenu!=="menuPart")} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_price"]):""} onChange={(e)=>{updateDataHandler("_price",menuData,e.target.value,setMenuData)}}/>
 
-                            <input placeholder={activeMenu !== "menuPart" ? menuData["_discount"]:"تخفیف"} type="number" min="0" max="100" disabled={(mode || !editMode)&& activeMenu!=="menuPart"} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_discount"]):""} onChange={(e)=>{updateDataHandler("_discount",menuData,e.target.value,setMenuData)}}/>
+                            <input placeholder={activeMenu !== "menuPart" ? menuData["_discount"]:"تخفیف"} type="number" min="0" max="100" disabled={mode ||( !editMode && activeMenu!=="menuPart")} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_discount"]):""} onChange={(e)=>{updateDataHandler("_discount",menuData,e.target.value,setMenuData)}}/>
 
-                            <input placeholder={activeMenu !== "menuPart" ? menuData["_count"]:"تعداد"} type="number" min="0" max="1000" disabled={(mode || !editMode)&& activeMenu!=="menuPart"} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_count"]):""} onChange={(e)=>{updateDataHandler("_count",menuData,e.target.value,setMenuData)}}/>
+                            <input placeholder={activeMenu !== "menuPart" ? menuData["_count"]:"تعداد"} type="number" min="0" max="1000" disabled={mode ||( !editMode && activeMenu!=="menuPart")} value={editMode || activeMenu==="menuPart" ? nullHandler(menuData["_count"]):""} onChange={(e)=>{updateDataHandler("_count",menuData,e.target.value,setMenuData)}}/>
 
-                            <input type="file" disabled={(mode || !editMode)&& activeMenu!=="menuPart"} onChange={(e)=>{updateDataHandler("_img",menuData,e.target.value,setMenuData)}}/>
+                            <input type="file" accept=".jpg, .png, .jpeg, .webp .svg|image/*" disabled={mode || !editMode } onChange={(e)=>{updateDataHandler("_img",menuData,e.target.files[0],setMenuData)}}/>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@ export const postHandler = async (data,addres,sets,state=0)=>{
         if(res.data._op === 1)
             state = 1;
         else if(res.data._op === 2)
-            state = 2;
+            state = res.data._data;
 
         if(sets!==null)
             sets(res.data._data);
@@ -75,6 +75,16 @@ export const billCalculatorHandler = (menu,selectedItems)=>{
     return [ price.toFixed(3) , discount.toFixed(3), (price - discount).toFixed(3) ];
 }
 
+const uploader = async (data,addres)=>{
+    try{
+        const res = await axios.post(local + addres,data)
+
+        console.log("post",res.data._data)
+
+    }catch(err){
+        // console.log(err)
+    }
+}
 
 export const adminControlHandler = (op,data)=>{
 
@@ -96,7 +106,19 @@ export const adminControlHandler = (op,data)=>{
         return true;
     }
 
-    postHandler(data,"/editMenu",null);
+
+    const {"_img":_,...rest} = data["_data"];
+    // rest["_img"] = null;
+    postHandler(rest,"/editMenu",null);
+    if(!!data["_data"]["_img"] && data["_data"]["_img"]!==null && data["_id"] !== null){
+        const formData = new FormData();
+        formData.append("_img",data["_data"]["_img"]);
+        formData.append("_id",data["_id"]);
+        console.log(data["_data"]["_img"],data["_id"])
+        
+        uploader(formData,"/uploadPic");
+    }
+
     return true;
 }
 

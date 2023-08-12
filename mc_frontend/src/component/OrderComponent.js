@@ -27,7 +27,7 @@ const OrderComponent = (props) => {
                 var ordersTitle = "";
                 Object.keys(orders).map((item)=>{
                     if(item!=="_details"){
-                        ordersTitle += orders[item]["_title"] + " x"+orders[item]["_count"]+ (orders[item]["_discount"]!==null?" *"+orders[item]["_discount"]:"") + " - "
+                        ordersTitle += orders[item]["_title"] + "  x"+orders[item]["_count"]+ (orders[item]["_discount"]!==null?" %"+orders[item]["_discount"]:"") + " - "
                     }
                 })
                 ordersTitle = ordersTitle.slice(0,-2);
