@@ -78,7 +78,12 @@ app.post("/addSection",(req,res)=>{
     db.query(pre_q,(err,data)=>{
         if(err) return res.json(err);
 
-        const q_1 = "INSERT INTO `mac_cafe`.`sections` (`_id`, `_title`) VALUES (" + (data[0]["_id"]+10) +", " + checkDataType(data_main["_title"]) + ");"
+        var id = 0
+
+        if(data.length!==0){
+            id = data[0]["_id"];
+        }
+        const q_1 = "INSERT INTO `mac_cafe`.`sections` (`_id`, `_title`) VALUES (" + (id+10) +", " + checkDataType(data_main["_title"]) + ");"
         db.query(q_1,(err,data)=>{
             if(err) return res.json(err);
             return res.json({_op:1});
@@ -226,6 +231,7 @@ app.post("/uploadPic",upload.single("_img"),(req,res)=>{
         return res.json({_op:16});
     });
 })
+
 
 // End of Backend
 app.listen(process.env.PORT || 8800, ()=>{
