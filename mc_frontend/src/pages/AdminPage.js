@@ -206,7 +206,7 @@ const AdminPage = (props) => {
                 </div>
             </div>
 
-            {/* <BackgroundItemComponent /> */}
+            <BackgroundItemComponent />
 
             <FooterComponent />
         </div>

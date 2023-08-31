@@ -67,7 +67,7 @@ const OrdersPage = (props) => {
                 <OrderComponent titles={titles} content={content} click={(e)=>{orderHandler(e.target.id)}}/>
             </div>
 
-            {/* <BackgroundItemComponent /> */}
+            <BackgroundItemComponent />
 
             <FooterComponent />
         </div>

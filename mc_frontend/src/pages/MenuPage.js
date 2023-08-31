@@ -39,7 +39,7 @@ const MenuPage = (props) => {
             <MenuComponent countHandler={props.countHandler} menu={activeMenu} selectedItem={props.selectedItem}/>
         </div>
 
-        {/* <BackgroundItemComponent /> */}
+        <BackgroundItemComponent />
 
         <FooterComponent />
   </div> );

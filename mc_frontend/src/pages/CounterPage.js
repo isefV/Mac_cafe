@@ -76,7 +76,7 @@ const CounterPage = (props) => {
                 </div>
             </div>
 
-            {/* <BackgroundItemComponent /> */}
+            <BackgroundItemComponent />
 
             <FooterComponent />
         </div>
