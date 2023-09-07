@@ -41,6 +41,7 @@ const MenuPage = (props) => {
 
         <BackgroundItemComponent />
 
+
         <FooterComponent />
   </div> );
 }

@@ -21,6 +21,11 @@
         .layout{
             grid-template-columns: 1fr;
         }
+
+        .bg-takeaway{
+            left:1%;
+        }
+
     }
     
 
@@ -33,6 +38,9 @@
             }
         }
     }
+
+
+
 }
 
 @media (max-width:650px) {

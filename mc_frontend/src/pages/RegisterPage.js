@@ -94,7 +94,8 @@ const RegisterPage = (props) => {
             </div>
         </div>
 
-        <BackgroundItemComponent />
+        <div className="bg-item bg-animations bg-tea center" key={"bg-tea"}><img src="./assets/img/tea.png" alt="3d"/></div>
+        <div className="bg-item bg-animations bg-takeaway center" key={"bg-takeaway"}><img src="./assets/img/takeaway-cup.png" alt="3d"/></div>
 
         <FooterComponent />
 </div> );
